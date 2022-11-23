@@ -13,4 +13,17 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="LightThem">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">#A80101</item>
+    </style>
+
+    <style name="DarkThem">
+        <item name="colorPrimary">@color/mainDarkThem</item>
+        <item name="colorOnPrimary">@color/mainDarkThem</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+    </style>
+
+    <color name="mainDarkThem">#1E1E1E</color>
 </resources>
