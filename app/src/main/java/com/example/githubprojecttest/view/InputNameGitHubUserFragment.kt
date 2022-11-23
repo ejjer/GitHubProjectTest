@@ -34,7 +34,7 @@ class InputNameGitHubUserFragment : Fragment() {
         val searchEditText = binding.editTextInputName
         val searchBtn = binding.buttonSearch
         searchBtn.setOnClickListener {
-           // viewModel.inputUserName.postValue(searchEditText.getText())
+            // viewModel.inputUserName.postValue(searchEditText.getText())
             viewModel.inputUserName.postValue(searchEditText.getText().toString())
         }
     }
@@ -43,6 +43,7 @@ class InputNameGitHubUserFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
     companion object {
         fun newInstance() = InputNameGitHubUserFragment()
     }

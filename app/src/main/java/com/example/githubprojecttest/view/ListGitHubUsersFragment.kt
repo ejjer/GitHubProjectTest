@@ -47,7 +47,9 @@ class ListGitHubUsersFragment : Fragment() {
     }
 
     private fun loadUsers() {
-        viewModel.inputUserName.observe(requireContext() as LifecycleOwner, Observer { userName = it })
+        viewModel.inputUserName.observe(
+            requireContext() as LifecycleOwner,
+            Observer { userName = it })
         val listUsers = GitHubApiService.retrofitApi().loadFollowers(userName)
         listUsers.enqueue(object : Callback<List<GitHubUserModel>> {
             override fun onResponse(
