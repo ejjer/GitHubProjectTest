@@ -62,14 +62,11 @@ class ListGitHubUsersFragment : Fragment() {
                     recyclerView.adapter = adapter
                 }
             }
-
             override fun onFailure(call: Call<List<GitHubUserModel>>, t: Throwable) {
                 t.printStackTrace()
             }
-
         })
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

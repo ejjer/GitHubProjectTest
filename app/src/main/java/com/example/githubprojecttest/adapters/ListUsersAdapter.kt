@@ -17,6 +17,7 @@ class ListUsersAdapter(private val users: List<GitHubUserModel>) :
         val userAvatar = itemView.findViewById<ImageView>(R.id.userAvatar)
         val userName = itemView.findViewById<TextView>(R.id.userName)
         val userId = itemView.findViewById<TextView>(R.id.userId)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListUsersAdapter.ViewHolder {

@@ -4,4 +4,6 @@ interface Navigation {
     fun showGitHubListFragment()
     fun showCurrentGitHubUser()
     fun showSettings()
+   // fun showUser()
+
 }

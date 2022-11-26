@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainColor"
     android:orientation="vertical"
     tools:context=".view.SettingsFragment">
 
@@ -11,40 +10,30 @@
         android:id="@+id/choose_theme_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="5dp"
+        android:textSize="40sp"
         android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
         android:text="@string/choose_theme" />
-    <CheckBox
-        android:id="@+id/dark_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dark_them"/>
 
-    <CheckBox
-        android:id="@+id/light_check_box"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/dark_tv_button"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/light_them" />
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp"
+        android:text="@string/dark_them"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
-    <TextView
-        android:id="@+id/choose_language_tv"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/light_tv_button"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:text="@string/choose_language" />
-
-    <CheckBox
-        android:id="@+id/english_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/english_language" />
-
-    <CheckBox
-        android:id="@+id/russian_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/russian_language"/>
-
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/light_them"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
 </LinearLayout>

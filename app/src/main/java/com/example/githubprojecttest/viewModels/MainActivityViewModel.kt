@@ -5,4 +5,5 @@ import androidx.lifecycle.ViewModel
 
 open class MainActivityViewModel : ViewModel() {
     val inputUserName = MutableLiveData<String>()
+    val theme = MutableLiveData<String>()
 }

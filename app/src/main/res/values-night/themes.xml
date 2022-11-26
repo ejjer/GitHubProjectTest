@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.V31.Night.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimaryBase</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariantBase</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryBase</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainerBase</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainerBase</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondaryBase</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariantBase</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryBase</item>
+        <item name="colorSecondaryContainer">?attr/colorOnPrimaryContainer</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/colorBackgroundBase</item>
+        <item name="android:textColor">@color/colorTextBase</item>
+    </style>
+
+    <style name="Base.Theme.GitHubProjectTest" parent="Base.V31.Night.Theme.GitHubProjectTest">
+
+    </style>
+    <color name="colorPrimaryBase">#2A3075</color>
+    <color name="colorPrimaryVariantBase">#4650C2</color>
+    <color name="colorOnPrimaryBase">#5763F5</color>
+    <color name="colorSecondaryBase">#4D5175</color>
+    <color name="colorSecondaryVariantBase">#4D5175</color>
+    <color name="colorOnSecondaryBase">#A3AAF7</color>
+    <color name="colorOnPrimaryContainerBase">#2A3075</color>
+</resources>

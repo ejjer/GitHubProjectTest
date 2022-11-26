@@ -4,7 +4,6 @@
     android:id="@+id/recyclerView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mainBackgroundColor"
     tools:context=".view.ListGitHubUsersFragment"
     tools:itemCount="6"
     tools:listitem="@layout/item_git_hub_user" />

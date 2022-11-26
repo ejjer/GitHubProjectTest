@@ -8,9 +8,12 @@
         <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable/ic_baseline_settings_applications_24.xml" value="0.103" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/activity_main.xml" value="0.184375" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_input_name_git_hub_user.xml" value="0.184375" />
-        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_list_git_hub_users.xml" value="0.1703125" />
-        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_settings.xml" value="0.1703125" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_list_git_hub_users.xml" value="0.3333333333333333" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_settings.xml" value="0.16666666666666666" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_user.xml" value="0.184375" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/item_git_hub_heder.xml" value="0.184375" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/item_git_hub_user.xml" value="0.3333333333333333" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/item_git_hub_view_type.xml" value="0.184375" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/menu/bottom_menu.xml" value="0.184375" />
       </map>
     </option>
