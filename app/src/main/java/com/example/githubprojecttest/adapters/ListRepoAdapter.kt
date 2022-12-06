@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.githubprojecttest.R
 import com.example.githubprojecttest.model.GitHubUserRepoModel
 
-class ListRepoAdapter(private val List<GitHubUserRepoModel>: List<GitHubUserRepoModel>?) :
+class ListRepoAdapter(private val gitHubRepository List<GitHubUserRepoModel>: List<GitHubUserRepoModel>) :
     RecyclerView.Adapter<ListRepoAdapter.ViewHolder>(), Parcelable {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
