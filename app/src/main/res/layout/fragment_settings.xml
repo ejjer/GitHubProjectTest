@@ -1,39 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".view.SettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_header_block"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryBase">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/settings_user_photo"
+            android:layout_width="@dimen/settings_user_photo_width"
+            android:layout_height="@dimen/settings_user_photo_height"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:src="@drawable/default_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginVertical="@dimen/vertical_margin"
+            android:text="@string/default_user"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/settings_user_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_user_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/horizontal_margin"
+            android:layout_marginVertical="@dimen/vertical_margin"
+            android:text="@string/default_status"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/settings_user_photo"
+            app:layout_constraintTop_toBottomOf="@+id/settings_user_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/settings_text_account"
+        android:text="@string/settings_account_text"
+        app:layout_constraintTop_toBottomOf="@+id/header_block"
+        style="@style/table_of_contents" />
+
+    <LinearLayout
+        android:id="@+id/settings_btn_change_phone_number"
+        style="@style/settingsButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text_account">
+
+        <TextView
+            android:id="@+id/settings_phone_number"
+            style="@style/normalText"
+            android:text="@string/default_email" />
+
+        <TextView
+            android:id="@+id/setting_label_phone_number"
+            style="@style/smallText"
+            android:text="@string/settings_label_email" />
+    </LinearLayout>
+
+    <View
+        style="@style/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_phone_number" />
+
+    <LinearLayout
+        android:id="@+id/settings_btn_change_login"
+        style="@style/settingsButtons"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_phone_number">
+
+        <TextView
+            android:id="@+id/settings_login"
+            style="@style/normalText"
+            android:text="@string/default_login" />
+
+        <TextView
+            android:id="@+id/setting_label_login"
+            style="@style/smallText"
+            android:text="@string/settings_label_login" />
+    </LinearLayout>
+
+    <View
+        style="@style/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_login" />
+
+    <LinearLayout
+        android:id="@+id/settings_btn_change_bio"
+        style="@style/settingsButtons"
+        android:layout_marginTop="@dimen/horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_login">
+
+        <TextView
+            android:id="@+id/settings_bio"
+            style="@style/normalText"
+            android:text="@string/default_bio" />
+
+        <TextView
+            android:id="@+id/setting_label_bio"
+            style="@style/smallText"
+            android:text="@string/settings_label_bio" />
+    </LinearLayout>
+
+    <View
+        style="@style/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_bio" />
 
     <TextView
         android:id="@+id/choose_theme_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="5dp"
-        android:text="@string/choose_theme" />
+        android:text="@string/settings_choose_theme_text"
+        style="@style/table_of_contents"
 
-    <Button
-        android:id="@+id/dark_tv_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="15dp"
-        android:text="@string/dark_them"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
+        />
+    <LinearLayout
+        android:id="@+id/settings_light_tv_button"
+        style="@style/settingsButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text_account">
 
-    <Button
-        android:id="@+id/light_tv_button"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:text="@string/light_them"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/settings_light_theme_text"
+            style="@style/normalText"
+            android:text="@string/settings_set_light_theme" />
+
+        <TextView
+            android:id="@+id/setting_label_light_theme"
+            style="@style/smallText"
+            android:text="@string/settings_label_theme" />
+    </LinearLayout>
+
+    <View
+        style="@style/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_phone_number" />
+
+    <LinearLayout
+        android:id="@+id/settings_dark_tv_button"
+        style="@style/settingsButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text_account">
+
+        <TextView
+            android:id="@+id/settings_dark_theme_text"
+            style="@style/normalText"
+            android:text="@string/settings_set_dark_theme" />
+
+        <TextView
+            android:id="@+id/setting_label_theme"
+            style="@style/smallText"
+            android:text="@string/settings_label_theme" />
+    </LinearLayout>
+
+    <View
+        style="@style/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_phone_number" />
+
+
+
 
 </LinearLayout>
+
+
+

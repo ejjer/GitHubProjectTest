@@ -1,64 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Light.Theme.GitHubProjectTest" parent="MaterialDrawerTheme">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimaryBase</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryVariantBase</item>
-        <item name="colorOnPrimary">@color/colorOnPrimaryBase</item>
-        <item name="colorPrimaryContainer">@color/colorPrimaryContainerBase</item>
-        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainerBase</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorSecondaryBase</item>
-        <item name="colorSecondaryVariant">@color/colorSecondaryVariantBase</item>
-        <item name="colorOnSecondary">@color/colorOnSecondaryBase</item>
-        <item name="colorSecondaryContainer">?attr/colorOnPrimaryContainer</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
-        <!-- Customize your theme here. -->
-        <item name="android:windowBackground">@color/colorBackgroundBase</item>
-        <item name="android:textColor">@color/colorTextBase</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorOnBackground">@color/white</item>
+
     </style>
 
-    <style name="Dark.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryVariantDark</item>
-        <item name="colorOnPrimary">@color/colorOnPrimaryDark</item>
-        <item name="colorPrimaryContainer">@color/colorPrimaryContainerDark</item>
-        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainerDark</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorSecondaryDark</item>
-        <item name="colorSecondaryVariant">@color/colorSecondaryVariantDark</item>
-        <item name="colorOnSecondary">@color/colorOnSecondaryDark</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
-        <!-- Customize your theme here. -->
-        <item name="android:windowBackground">@color/colorBackgroundDark</item>
-        <item name="android:textColor">@color/colorTextDark</item>
-        <item name="android:navigationBarColor">@color/navigationBarColorDark</item>
+    <style name="Dark.Theme.GitHubProjectTest" parent="MaterialDrawerTheme">
+
+
     </style>
 
-    <color name="colorPrimaryBase">#2A3075</color>
-    <color name="colorPrimaryVariantBase">#4650C2</color>
-    <color name="colorOnPrimaryBase">#5763F5</color>
-    <color name="colorSecondaryBase">#4D5175</color>
-    <color name="colorSecondaryVariantBase">#757CB3</color>
-    <color name="colorOnSecondaryBase">#A3AAF7</color>
-    <color name="colorPrimaryContainerBase">#757CB3</color>
-    <color name="colorOnPrimaryContainerBase">#2A3075</color>
-    <color name="colorTextBase">#2A3075</color>
-    <color name="colorBackgroundBase">#C2C9FF</color>
 
 
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="colorPrimaryVariantDark">#000000</color>
-    <color name="colorOnPrimaryDark">#000000</color>
-    <color name="colorSecondaryDark">#FFFFFF</color>
-    <color name="colorSecondaryVariantDark">#FFFFFF</color>
-    <color name="colorOnSecondaryDark">#FFFFFF</color>
-    <color name="colorPrimaryContainerDark">#FFFFFF</color>
-    <color name="colorOnPrimaryContainerDark">#000000</color>
-    <color name="colorTextDark">#D3D3D3</color>
-    <color name="colorBackgroundDark">#3A3A3A</color>
-    <color name="navigationBarColorDark">#000000</color>
+
+
+
 </resources>

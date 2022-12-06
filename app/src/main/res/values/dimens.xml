@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="normal_text_size">16sp</dimen>
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="small_text_size">13sp</dimen>
+    <dimen name="vertical_large_margin">16dp</dimen>
+    <dimen name="large_text">18sp</dimen>
+    <!--settings Fragment-->
+    <dimen name="settings_user_photo_width">70dp</dimen>
+    <dimen name="settings_user_photo_height">70dp</dimen>
+    <dimen name="settings_change_photo_width">45dp</dimen>
+    <dimen name="settings_change_photo_height">45dp</dimen>
+    <dimen name="settings_ripple_effect_radius">4dp</dimen>
+    <dimen name="default_cardElevation">10dp</dimen>
+    <dimen name="default_card_corner_radius">10dp</dimen>
+</resources>

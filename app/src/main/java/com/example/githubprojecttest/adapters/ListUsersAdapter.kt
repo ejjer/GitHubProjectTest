@@ -10,8 +10,9 @@ import com.bumptech.glide.Glide
 import com.example.githubprojecttest.R
 import com.example.githubprojecttest.model.GitHubUserModel
 
-class ListUsersAdapter(private val users: List<GitHubUserModel>) :
+class ListUsersAdapter(private val users: List<GitHubUserModel>, val listener: ClickListener) :
     RecyclerView.Adapter<ListUsersAdapter.ViewHolder>() {
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val userAvatar = itemView.findViewById<ImageView>(R.id.userAvatar)
@@ -32,9 +33,17 @@ class ListUsersAdapter(private val users: List<GitHubUserModel>) :
         holder.userName.text = user.login
         holder.userId.text = user.id.toString()
         Glide.with(holder.itemView.context).load(user.avatarUrl).into(holder.userAvatar)
+        holder.itemView.setOnClickListener{
+            listener.onItemClick(user)
+        }
     }
 
     override fun getItemCount(): Int {
         return users.size
     }
+
+}
+
+interface ClickListener {
+    fun onItemClick(user: GitHubUserModel)
 }

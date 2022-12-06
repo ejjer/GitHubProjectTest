@@ -1,11 +1,9 @@
 package com.example.githubprojecttest.model
 
-import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
- class GitHubUserModel(
+import com.google.gson.annotations.SerializedName
+
+data class Owner(
     @SerializedName("avatar_url")
     val avatarUrl: String,
     @SerializedName("events_url")
@@ -24,6 +22,8 @@ import kotlinx.parcelize.Parcelize
     val id: Int,
     @SerializedName("login")
     val login: String,
+    @SerializedName("node_id")
+    val nodeId: String,
     @SerializedName("organizations_url")
     val organizationsUrl: String,
     @SerializedName("received_events_url")
@@ -40,5 +40,4 @@ import kotlinx.parcelize.Parcelize
     val type: String,
     @SerializedName("url")
     val url: String
-): Parcelable
-
+)
