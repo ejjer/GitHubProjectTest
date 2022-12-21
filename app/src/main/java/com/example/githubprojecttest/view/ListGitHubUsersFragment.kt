@@ -56,6 +56,7 @@ class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), 
                     adapter = ListUsersAdapter(list)
                     recyclerView.adapter = adapter
                 }
+
             }
         }
     }
