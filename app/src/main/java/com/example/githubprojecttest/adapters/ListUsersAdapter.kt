@@ -5,19 +5,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.githubprojecttest.R
 import com.example.githubprojecttest.model.GitHubUserModel
 
-class ListUsersAdapter(private val users: List<GitHubUserModel>, val listener: ClickListener) :
+class ListUsersAdapter(private val users: List<GitHubUserModel>, private val listener: ClickListener ) :
     RecyclerView.Adapter<ListUsersAdapter.ViewHolder>() {
 
 
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val userAvatar = itemView.findViewById<ImageView>(R.id.userAvatar)
-        val userName = itemView.findViewById<TextView>(R.id.userName)
-        val userId = itemView.findViewById<TextView>(R.id.userId)
+        val userAvatar: ImageView = itemView.findViewById(R.id.userAvatar)
+        val userName: TextView = itemView.findViewById(R.id.userName)
+        val userId: TextView = itemView.findViewById(R.id.userId)
 
     }
 
@@ -36,6 +38,7 @@ class ListUsersAdapter(private val users: List<GitHubUserModel>, val listener: C
         holder.itemView.setOnClickListener{
             listener.onItemClick(user)
         }
+
     }
 
     override fun getItemCount(): Int {

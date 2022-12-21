@@ -1,22 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Light.Theme.GitHubProjectTest" parent="MaterialDrawerTheme">
+    <style name="Light.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimaryBase</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/white</item>
         <item name="colorOnBackground">@color/white</item>
 
-    </style>
-
-    <style name="Dark.Theme.GitHubProjectTest" parent="MaterialDrawerTheme">
-
 
     </style>
 
+    <style name="Dark.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
 
-
-
-
+    </style>
 </resources>

@@ -18,4 +18,11 @@ data class PreferenseHelper(val context: Context) {
     fun getTheme(): String {
         return sharedPreferences.getString(THEMEID, "") ?: ""
     }
+    fun saveUserName(name: String) {
+        sharedPreferences.edit().putString(THEMEID, name).apply()
+    }
+
+    fun getUserName(): String {
+        return sharedPreferences.getString(THEMEID, "") ?: ""
+    }
 }

@@ -28,4 +28,9 @@
     <string name="settings_set_dark_theme">Dark</string>
     <string name="settings_set_light_theme">Light</string>
     <string name="default_item_text">item Text</string>
+    <string name="default_item_data">01.01.2020</string>
+    <string name="defaultLanguage">Language</string>
+    <string name="inputUserNameFollowersBtnText">Followers</string>
+    <string name="repository_btn_text">Repository</string>
+    <string name="followers_btn_text">Followers</string>
 </resources>

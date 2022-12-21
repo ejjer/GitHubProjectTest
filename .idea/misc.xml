@@ -5,12 +5,13 @@
       <map>
         <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.103" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable/header.xml" value="0.115" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable/ic_baseline_format_list_numbered_24.xml" value="0.1" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.103" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable/ic_baseline_settings_applications_24.xml" value="0.103" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/drawable/ripple_effect.xml" value="0.115" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/activity_main.xml" value="0.184375" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_git_hub_repo_list.xml" value="0.184375" />
-        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_input_name_git_hub_user.xml" value="0.184375" />
+        <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_input_name_git_hub_user.xml" value="0.16666666666666666" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_list_git_hub_users.xml" value="0.3333333333333333" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_settings.xml" value="0.16666666666666666" />
         <entry key="..\:/GitHubProjectTest/app/src/main/res/layout/fragment_user.xml" value="0.184375" />

@@ -59,7 +59,7 @@
 
     <LinearLayout
         android:id="@+id/settings_btn_change_phone_number"
-        style="@style/settingsButtons"
+        style="@style/Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_text_account">
@@ -83,7 +83,7 @@
 
     <LinearLayout
         android:id="@+id/settings_btn_change_login"
-        style="@style/settingsButtons"
+        style="@style/Buttons"
         android:layout_marginTop="@dimen/horizontal_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +108,7 @@
 
     <LinearLayout
         android:id="@+id/settings_btn_change_bio"
-        style="@style/settingsButtons"
+        style="@style/Buttons"
         android:layout_marginTop="@dimen/horizontal_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +141,7 @@
         />
     <LinearLayout
         android:id="@+id/settings_light_tv_button"
-        style="@style/settingsButtons"
+        style="@style/Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_text_account">
@@ -165,7 +165,7 @@
 
     <LinearLayout
         android:id="@+id/settings_dark_tv_button"
-        style="@style/settingsButtons"
+        style="@style/Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_text_account">

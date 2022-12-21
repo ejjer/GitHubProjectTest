@@ -3,7 +3,7 @@ package com.example.githubprojecttest.model
 
 import com.google.gson.annotations.SerializedName
 
-data class GitHubUserRepoModelItem(
+data class GitHubUserRepoModel(
     @SerializedName("archive_url")
     val archiveUrl: String,
     @SerializedName("archived")
@@ -92,7 +92,7 @@ data class GitHubUserRepoModelItem(
     val labelsUrl: String,
     @SerializedName("language")
     val language: Any,
-    @SerializedName("languages_url")
+    @SerializedName("languages_url")//
     val languagesUrl: String,
     @SerializedName("merges_url")
     val mergesUrl: String,

@@ -11,7 +11,9 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.githubprojecttest.R
 import com.example.githubprojecttest.adapters.ClickListener
+import com.example.githubprojecttest.adapters.ListRepoAdapter
 import com.example.githubprojecttest.adapters.ListUsersAdapter
 import com.example.githubprojecttest.api.GitHubApiService
 import com.example.githubprojecttest.databinding.FragmentListGitHubUsersBinding
@@ -23,16 +25,17 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class ListGitHubUsersFragment : Fragment(), ClickListener {
+class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), ClickListener {
     private lateinit var adapter: ListUsersAdapter
     private lateinit var recyclerView: RecyclerView
 
     private val viewModel: MainActivityViewModel by activityViewModels()
     var userName = "krishmasand"
-    private var _binding: FragmentListGitHubUsersBinding? = null
-    private val binding get() = _binding!!
+
+
     private var listener: Navigation? = null
 
+    private var binding: FragmentListGitHubUsersBinding? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -41,48 +44,26 @@ class ListGitHubUsersFragment : Fragment(), ClickListener {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentListGitHubUsersBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = binding.recyclerView
+        binding = FragmentListGitHubUsersBinding.bind(view)
+        recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        loadUsers()
-    }
-
-    private fun loadUsers() {
-        viewModel.inputUserName.observe(
-            requireContext() as LifecycleOwner,
-            Observer { userName = it })
-        val listUsers = GitHubApiService.retrofitApi().loadFollowers(userName)
-        listUsers.enqueue(object : Callback<List<GitHubUserModel>> {
-            override fun onResponse(
-                call: Call<List<GitHubUserModel>>,
-                response: Response<List<GitHubUserModel>>
-            ) {
-                val list = response.body()
-                list?.let {
-                    adapter = ListUsersAdapter(list,this@ListGitHubUsersFragment)
+        viewModel.inputUserName.observe(viewLifecycleOwner) {
+            viewModel.loadFollowers(inputUserName).observe(viewLifecycleOwner) { list ->
+                if (list != null) {
+                    adapter = ListUsersAdapter(list)
                     recyclerView.adapter = adapter
                 }
             }
-
-            override fun onFailure(call: Call<List<GitHubUserModel>>, t: Throwable) {
-                t.printStackTrace()
-            }
-        })
+        }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 
     companion object {
@@ -91,6 +72,7 @@ class ListGitHubUsersFragment : Fragment(), ClickListener {
 
     override fun onItemClick(user: GitHubUserModel) {
         listener?.showCurrentUser(user)
+
     }
 }
 
