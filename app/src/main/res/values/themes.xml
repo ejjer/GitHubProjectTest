@@ -3,7 +3,6 @@
     <style name="Light.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimaryBase</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/white</item>
         <item name="colorOnBackground">@color/white</item>
 

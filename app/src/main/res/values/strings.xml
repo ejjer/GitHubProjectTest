@@ -33,4 +33,5 @@
     <string name="inputUserNameFollowersBtnText">Followers</string>
     <string name="repository_btn_text">Repository</string>
     <string name="followers_btn_text">Followers</string>
+    <string name="settings_header">Settings</string>
 </resources>

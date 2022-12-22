@@ -33,7 +33,7 @@ class SettingsFragment : Fragment() {
         }
 
         binding.settingsDarkTvButton.setOnClickListener {
-            viewModel.theme.postValue("Dark")//устанавливаю значение theme в LiveData
+            viewModel.theme.postValue("Dark")
         }
     }
 

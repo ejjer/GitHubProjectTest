@@ -29,6 +29,7 @@ class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), 
     private lateinit var adapter: ListUsersAdapter
     private lateinit var recyclerView: RecyclerView
 
+
     private val viewModel: MainActivityViewModel by activityViewModels()
     var userName = "krishmasand"
 
@@ -50,13 +51,12 @@ class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), 
         binding = FragmentListGitHubUsersBinding.bind(view)
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        viewModel.inputUserName.observe(viewLifecycleOwner) {
+        viewModel.inputUserName.observe(viewLifecycleOwner) { inputUserName ->
             viewModel.loadFollowers(inputUserName).observe(viewLifecycleOwner) { list ->
                 if (list != null) {
-                    adapter = ListUsersAdapter(list)
+                    adapter = ListUsersAdapter(list,listener)
                     recyclerView.adapter = adapter
                 }
-
             }
         }
     }
