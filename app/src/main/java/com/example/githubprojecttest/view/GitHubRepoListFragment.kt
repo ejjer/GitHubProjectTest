@@ -1,5 +1,6 @@
 package com.example.githubprojecttest.view
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.example.githubprojecttest.adapters.ListRepoAdapter
 import com.example.githubprojecttest.api.GitHubApiService
 import com.example.githubprojecttest.databinding.FragmentGitHubRepoListBinding
 import com.example.githubprojecttest.model.GitHubUserRepoModel
+import com.example.githubprojecttest.navigation.Navigation
 import com.example.githubprojecttest.viewModels.MainActivityViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,6 +28,7 @@ class GitHubRepoListFragment : Fragment(R.layout.fragment_git_hub_repo_list) {
     private val viewModel: MainActivityViewModel by activityViewModels()
     private lateinit var adapter: ListRepoAdapter
     private lateinit var recyclerView:RecyclerView
+    private var listener: Navigation? = null
 
 
     private var binding: FragmentGitHubRepoListBinding? = null
@@ -46,7 +49,12 @@ class GitHubRepoListFragment : Fragment(R.layout.fragment_git_hub_repo_list) {
         }
     }
 
-
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is Navigation) {
+            listener = context
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

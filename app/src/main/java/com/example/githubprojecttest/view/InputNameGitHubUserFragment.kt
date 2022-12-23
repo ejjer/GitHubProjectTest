@@ -33,6 +33,7 @@ class InputNameGitHubUserFragment() : Fragment() {
         return binding.root
 
     }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is Navigation) {
@@ -51,16 +52,15 @@ class InputNameGitHubUserFragment() : Fragment() {
         userName.text = userNameStart
 
         searchBtn.setOnClickListener {
-            listener?.showInputNameGitHubUserFragment()
+            viewModel.inputUserName.postValue(searchEditText.text.toString())
+            listener?.showGitHubListFragment()
         }
-
-
         repositoryBtn.setOnClickListener {
             listener?.showRepos()
             viewModel.inputUserName.postValue(userNameStart)
         }
         followersBtn.setOnClickListener {
-           // viewModel.navigation.postValue("FollowersFragment")
+            listener?.showGitHubListFragment()
         }
 
     }

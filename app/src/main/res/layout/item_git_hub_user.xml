@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginVertical="5dp"
-    android:layout_marginHorizontal="3dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/horizontal_margin"
+    android:layout_marginVertical="@dimen/vertical_margin"
     app:cardCornerRadius="@dimen/default_card_corner_radius"
     app:contentPadding="@dimen/default_cardElevation">
 

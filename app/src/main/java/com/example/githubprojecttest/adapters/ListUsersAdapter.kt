@@ -11,7 +11,8 @@ import com.bumptech.glide.Glide
 import com.example.githubprojecttest.R
 import com.example.githubprojecttest.model.GitHubUserModel
 
-class ListUsersAdapter(private val users: List<GitHubUserModel>, private val listener: ClickListener ) :
+class ListUsersAdapter(private val users: List<GitHubUserModel>//, private val listener: ClickListener
+) :
     RecyclerView.Adapter<ListUsersAdapter.ViewHolder>() {
 
 
@@ -35,9 +36,9 @@ class ListUsersAdapter(private val users: List<GitHubUserModel>, private val lis
         holder.userName.text = user.login
         holder.userId.text = user.id.toString()
         Glide.with(holder.itemView.context).load(user.avatarUrl).into(holder.userAvatar)
-        holder.itemView.setOnClickListener{
-            listener.onItemClick(user)
-        }
+//        holder.itemView.setOnClickListener{
+//            listener.onItemClick(user)
+//        }
 
     }
 
@@ -47,6 +48,6 @@ class ListUsersAdapter(private val users: List<GitHubUserModel>, private val lis
 
 }
 
-interface ClickListener {
-    fun onItemClick(user: GitHubUserModel)
-}
+//interface ClickListener {
+//    fun onItemClick(user: GitHubUserModel)
+//}

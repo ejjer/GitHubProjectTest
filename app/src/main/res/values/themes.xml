@@ -1,15 +1,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Light.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Light.Theme.GitHubProjectTest" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimaryBase</item>
-        <item name="colorAccent">@color/white</item>
-        <item name="colorOnBackground">@color/white</item>
+        <item name="colorPrimary">#4791db</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">#1976d2</item>
+        <item name="colorOnPrimaryContainer">#115293</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#5a48a7</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">#311b92</item>
+        <item name="colorOnSecondaryContainer">#221266</item>
 
 
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">#33004C9E</item>
+        <item name="colorOnTertiary">#FFFFFF</item>
+        <item name="colorTertiaryContainer">#7A1DFF</item>
+        <item name="colorOnTertiaryContainer">#190733</item>
+        <!-- Status bar color. -->
+        <item name="colorError">#33004C9E</item>
+        <!-- Customize your theme here. -->
     </style>
 
-    <style name="Dark.Theme.GitHubProjectTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Dark.Theme.GitHubProjectTest" parent="Theme.Material3.DayNight.NoActionBar">
 
 
     </style>

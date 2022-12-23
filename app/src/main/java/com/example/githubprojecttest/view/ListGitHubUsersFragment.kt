@@ -2,30 +2,21 @@ package com.example.githubprojecttest.view
 
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.githubprojecttest.R
-import com.example.githubprojecttest.adapters.ClickListener
-import com.example.githubprojecttest.adapters.ListRepoAdapter
 import com.example.githubprojecttest.adapters.ListUsersAdapter
-import com.example.githubprojecttest.api.GitHubApiService
 import com.example.githubprojecttest.databinding.FragmentListGitHubUsersBinding
 import com.example.githubprojecttest.model.GitHubUserModel
 import com.example.githubprojecttest.navigation.Navigation
 import com.example.githubprojecttest.viewModels.MainActivityViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.mikepenz.fastadapter.ClickListener
 
 
-class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), ClickListener {
+class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users,) {// ClickListener()
     private lateinit var adapter: ListUsersAdapter
     private lateinit var recyclerView: RecyclerView
 
@@ -54,7 +45,7 @@ class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), 
         viewModel.inputUserName.observe(viewLifecycleOwner) { inputUserName ->
             viewModel.loadFollowers(inputUserName).observe(viewLifecycleOwner) { list ->
                 if (list != null) {
-                    adapter = ListUsersAdapter(list,listener)
+                    adapter = ListUsersAdapter(list)
                     recyclerView.adapter = adapter
                 }
             }
@@ -71,9 +62,9 @@ class ListGitHubUsersFragment : Fragment(R.layout.fragment_list_git_hub_users), 
         fun newInstance() = ListGitHubUsersFragment()
     }
 
-    override fun onItemClick(user: GitHubUserModel) {
-        listener?.showCurrentUser(user)
-
-    }
+//    override fun onItemClick(user: GitHubUserModel) {
+//        listener?.showCurrentUser(user)
+//
+//    }
 }
 

@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity(), Navigation {
         setContentView(binding.root)
         setTheme()
         if (savedInstanceState == null) {
-            showRepos()
-            // showCurrentGitHubUser()
+            showInputNameGitHubUserFragment()
         }
         clickBottomBar()
     }

@@ -12,7 +12,7 @@
         android:id="@+id/settings_header_block"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimaryBase">
+        android:background="@color/colorPrimary">
 
 
         <TextView
